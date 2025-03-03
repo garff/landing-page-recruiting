@@ -8,8 +8,23 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, User, Clock, ArrowLeft, Share2, Bookmark, ThumbsUp } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Calendar,
+  User,
+  Clock,
+  ArrowLeft,
+  Share2,
+  Bookmark,
+  ThumbsUp,
+} from 'lucide-react';
 
 // Blog post type definition
 type BlogPost = {
@@ -24,7 +39,12 @@ type BlogPost = {
   date: string;
   readTime: string;
   category: string;
-  categoryKey: 'aiTechnology' | 'resumeTips' | 'interviewTips' | 'careerAdvice' | 'workplaceTrends';
+  categoryKey:
+    | 'aiTechnology'
+    | 'resumeTips'
+    | 'interviewTips'
+    | 'careerAdvice'
+    | 'workplaceTrends';
   image: string;
   featured?: boolean;
 };
@@ -35,8 +55,10 @@ const blogPosts: BlogPost[] = [
     id: '1',
     title: 'How AI is Revolutionizing the Job Application Process',
     titleDa: 'Hvordan AI revolutionerer jobansøgningsprocessen',
-    excerpt: 'Discover how artificial intelligence is transforming the way people apply for jobs and how employers find talent.',
-    excerptDa: 'Opdag hvordan kunstig intelligens transformerer måden, folk søger job på, og hvordan arbejdsgivere finder talent.',
+    excerpt:
+      'Discover how artificial intelligence is transforming the way people apply for jobs and how employers find talent.',
+    excerptDa:
+      'Opdag hvordan kunstig intelligens transformerer måden, folk søger job på, og hvordan arbejdsgivere finder talent.',
     content: `
       <p>The job application process has traditionally been time-consuming and often frustrating for both applicants and employers. However, artificial intelligence is rapidly changing this landscape, making the process more efficient, personalized, and effective for all parties involved.</p>
       
@@ -96,15 +118,18 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min',
     category: 'AI Technology',
     categoryKey: 'aiTechnology',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000',
-    featured: true
+    image:
+      'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000',
+    featured: true,
   },
   {
     id: '2',
     title: '10 Resume Tips That Will Get You Noticed in 2025',
     titleDa: '10 CV-tips, der vil få dig bemærket i 2025',
-    excerpt: 'Learn the latest resume trends and techniques that will help your application stand out from the crowd.',
-    excerptDa: 'Lær de seneste CV-tendenser og teknikker, der vil hjælpe din ansøgning med at skille sig ud fra mængden.',
+    excerpt:
+      'Learn the latest resume trends and techniques that will help your application stand out from the crowd.',
+    excerptDa:
+      'Lær de seneste CV-tendenser og teknikker, der vil hjælpe din ansøgning med at skille sig ud fra mængden.',
     content: `
       <p>In today's competitive job market, having a standout resume is more important than ever. As we move into 2025, the expectations and standards for resumes continue to evolve. Here are ten essential tips to ensure your resume gets noticed by employers and makes it past the increasingly sophisticated applicant tracking systems (ATS).</p>
       
@@ -300,14 +325,17 @@ const blogPosts: BlogPost[] = [
     readTime: '7 min',
     category: 'Resume Tips',
     categoryKey: 'resumeTips',
-    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1000'
+    image:
+      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1000',
   },
   {
     id: '3',
     title: 'The Future of Work: Remote vs. Hybrid Models',
     titleDa: 'Fremtidens arbejde: Fjernarbejde vs. hybride modeller',
-    excerpt: 'An in-depth analysis of how work arrangements are evolving and what it means for job seekers and employers.',
-    excerptDa: 'En dybdegående analyse af hvordan arbejdsordninger udvikler sig, og hvad det betyder for jobsøgende og arbejdsgivere.',
+    excerpt:
+      'An in-depth analysis of how work arrangements are evolving and what it means for job seekers and employers.',
+    excerptDa:
+      'En dybdegående analyse af hvordan arbejdsordninger udvikler sig, og hvad det betyder for jobsøgende og arbejdsgivere.',
     content: `
       <p>The landscape of work has undergone a dramatic transformation in recent years, accelerated by global events that forced organizations to rethink traditional office-based models. As we move forward, two primary work arrangements have emerged as dominant alternatives to the conventional 9-to-5 office setup: fully remote work and hybrid models. This article explores the advantages, challenges, and future trajectory of these work arrangements.</p>
       
@@ -509,14 +537,17 @@ const blogPosts: BlogPost[] = [
     readTime: '8 min',
     category: 'Workplace Trends',
     categoryKey: 'workplaceTrends',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000'
+    image:
+      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000',
   },
   {
     id: '4',
     title: 'Mastering the Virtual Interview: Expert Advice',
     titleDa: 'Behersk det virtuelle interview: Ekspertråd',
-    excerpt: 'Practical tips and strategies to help you succeed in online interviews and video assessments.',
-    excerptDa: 'Praktiske tips og strategier til at hjælpe dig med at få succes i online interviews og videovurderinger.',
+    excerpt:
+      'Practical tips and strategies to help you succeed in online interviews and video assessments.',
+    excerptDa:
+      'Praktiske tips og strategier til at hjælpe dig med at få succes i online interviews og videovurderinger.',
     content: `<p>Coming soon...</p>`,
     contentDa: `<p>Kommer snart...</p>`,
     author: 'Lars Petersen',
@@ -524,14 +555,17 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min',
     category: 'Interview Tips',
     categoryKey: 'interviewTips',
-    image: 'https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=1000'
+    image:
+      'https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=1000',
   },
   {
     id: '5',
     title: 'How to Showcase Soft Skills on Your Resume',
     titleDa: 'Sådan fremviser du bløde kompetencer på dit CV',
-    excerpt: 'Learn effective ways to highlight your interpersonal abilities and stand out to potential employers.',
-    excerptDa: 'Lær effektive måder at fremhæve dine interpersonelle evner og skille dig ud for potentielle arbejdsgivere.',
+    excerpt:
+      'Learn effective ways to highlight your interpersonal abilities and stand out to potential employers.',
+    excerptDa:
+      'Lær effektive måder at fremhæve dine interpersonelle evner og skille dig ud for potentielle arbejdsgivere.',
     content: `<p>Coming soon...</p>`,
     contentDa: `<p>Kommer snart...</p>`,
     author: 'Emma Schmidt',
@@ -539,14 +573,17 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min',
     category: 'Resume Tips',
     categoryKey: 'resumeTips',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000'
+    image:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000',
   },
   {
     id: '6',
     title: 'Navigating Career Changes in a Digital Economy',
     titleDa: 'Navigering af karriereændringer i en digital økonomi',
-    excerpt: 'Strategies for successfully transitioning to a new career path in today\'s rapidly evolving job market.',
-    excerptDa: 'Strategier til succesfuld overgang til en ny karrierevej i dagens hurtigt udviklende jobmarked.',
+    excerpt:
+      "Strategies for successfully transitioning to a new career path in today's rapidly evolving job market.",
+    excerptDa:
+      'Strategier til succesfuld overgang til en ny karrierevej i dagens hurtigt udviklende jobmarked.',
     content: `<p>Coming soon...</p>`,
     contentDa: `<p>Kommer snart...</p>`,
     author: 'Mikkel Hansen',
@@ -554,36 +591,45 @@ const blogPosts: BlogPost[] = [
     readTime: '9 min',
     category: 'Career Advice',
     categoryKey: 'careerAdvice',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000'
-  }
+    image:
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000',
+  },
 ];
 
 // Related posts function
 const getRelatedPosts = (currentPostId: string, categoryKey: string) => {
   return blogPosts
-    .filter(post => post. id !== currentPostId && post.categoryKey === categoryKey)
+    .filter(
+      (post) => post.id !== currentPostId && post.categoryKey === categoryKey
+    )
     .slice(0, 3);
 };
 
 // Format date to be more readable
 const formatDate = (dateString: string, language: string) => {
   const date = new Date(dateString);
-  return date.toLocaleDateString(language === 'da' ? 'da-DK' : 'en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
+  return date.toLocaleDateString(language === 'da' ? 'da-DK' : 'en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
   });
 };
 
 // Get the translated category name for a post
 const getTranslatedCategory = (categoryKey: string, t: any) => {
-  switch(categoryKey) {
-    case 'aiTechnology': return t.blog.categories.aiTechnology;
-    case 'resumeTips': return t.blog.categories.resumeTips;
-    case 'interviewTips': return t.blog.categories.interviewTips;
-    case 'careerAdvice': return t.blog.categories.careerAdvice;
-    case 'workplaceTrends': return t.blog.categories.workplaceTrends;
-    default: return categoryKey;
+  switch (categoryKey) {
+    case 'aiTechnology':
+      return t.blog.categories.aiTechnology;
+    case 'resumeTips':
+      return t.blog.categories.resumeTips;
+    case 'interviewTips':
+      return t.blog.categories.interviewTips;
+    case 'careerAdvice':
+      return t.blog.categories.careerAdvice;
+    case 'workplaceTrends':
+      return t.blog.categories.workplaceTrends;
+    default:
+      return categoryKey;
   }
 };
 
@@ -593,32 +639,49 @@ export default function BlogPostPage() {
   const router = useRouter();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
-  
+
   useEffect(() => {
     if (params.id) {
       const postId = Array.isArray(params.id) ? params.id[0] : params.id;
-      const foundPost = blogPosts.find(p => p.id === postId);
-      
+      const foundPost = blogPosts.find((p) => p.id === postId);
+
       if (foundPost) {
         // Apply translations to the post
         const translatedPost = {
           ...foundPost,
-          title: language === 'da' && foundPost.titleDa ? foundPost.titleDa : foundPost.title,
-          excerpt: language === 'da' && foundPost.excerptDa ? foundPost.excerptDa : foundPost.excerpt,
-          content: language === 'da' && foundPost.contentDa ? foundPost.contentDa : foundPost.content,
-          category: getTranslatedCategory(foundPost.categoryKey, t)
+          title:
+            language === 'da' && foundPost.titleDa
+              ? foundPost.titleDa
+              : foundPost.title,
+          excerpt:
+            language === 'da' && foundPost.excerptDa
+              ? foundPost.excerptDa
+              : foundPost.excerpt,
+          content:
+            language === 'da' && foundPost.contentDa
+              ? foundPost.contentDa
+              : foundPost.content,
+          category: getTranslatedCategory(foundPost.categoryKey, t),
         };
-        
+
         setPost(translatedPost);
-        
+
         // Get related posts and apply translations
-        const related = getRelatedPosts(postId, foundPost.categoryKey).map(relatedPost => ({
-          ...relatedPost,
-          title: language === 'da' && relatedPost.titleDa ? relatedPost.titleDa : relatedPost.title,
-          excerpt: language === 'da' && relatedPost.excerptDa ? relatedPost.excerptDa : relatedPost.excerpt,
-          category: getTranslatedCategory(relatedPost.categoryKey, t)
-        }));
-        
+        const related = getRelatedPosts(postId, foundPost.categoryKey).map(
+          (relatedPost) => ({
+            ...relatedPost,
+            title:
+              language === 'da' && relatedPost.titleDa
+                ? relatedPost.titleDa
+                : relatedPost.title,
+            excerpt:
+              language === 'da' && relatedPost.excerptDa
+                ? relatedPost.excerptDa
+                : relatedPost.excerpt,
+            category: getTranslatedCategory(relatedPost.categoryKey, t),
+          })
+        );
+
         setRelatedPosts(related);
       } else {
         // Redirect to blog main page if post not found
@@ -630,7 +693,10 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center">
-        <p className="text-base sm:text-xl text-muted-foreground" aria-live="polite">
+        <p
+          className="text-base sm:text-xl text-muted-foreground"
+          aria-live="polite"
+        >
           {t.blog.posts.loadingArticle}
         </p>
       </div>
@@ -649,15 +715,18 @@ export default function BlogPostPage() {
                 {t.blog.backToBlog}
               </Button>
             </Link>
-            
+
             <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
               {post.category}
             </Badge>
-            
-            <h1 id="article-title" className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+
+            <h1
+              id="article-title"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+            >
               {post.title}
             </h1>
-            
+
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-1" aria-hidden="true" />
@@ -672,7 +741,7 @@ export default function BlogPostPage() {
                 <span>{post.author}</span>
               </div>
             </div>
-            
+
             <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden mb-8">
               <Image
                 src={post.image}
@@ -688,7 +757,10 @@ export default function BlogPostPage() {
       </section>
 
       {/* Article Content */}
-      <section className="py-12 bg-background" aria-labelledby="article-content">
+      <section
+        className="py-12 bg-background"
+        aria-labelledby="article-content"
+      >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-end gap-3 mb-8">
             <Button variant="outline" size="sm" className="gap-2">
@@ -700,20 +772,22 @@ export default function BlogPostPage() {
               {t.blog.save}
             </Button>
           </div>
-          
-          <div 
+
+          <div
             className="prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
             aria-labelledby="article-content"
           />
-          
+
           <div className="mt-12 pt-8 border-t flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Button variant="outline" size="sm" className="gap-2">
                 <ThumbsUp className="h-4 w-4" aria-hidden="true" />
                 {t.blog.helpful}
               </Button>
-              <span className="text-sm text-muted-foreground">42 {t.blog.peopleFoundHelpful}</span>
+              <span className="text-sm text-muted-foreground">
+                42 {t.blog.peopleFoundHelpful}
+              </span>
             </div>
             <Button variant="outline" size="sm" className="gap-2">
               <Share2 className="h-4 w-4" aria-hidden="true" />
@@ -725,12 +799,20 @@ export default function BlogPostPage() {
 
       {/* Related Articles */}
       {relatedPosts.length > 0 && (
-        <section className="py-12 bg-primary/5" aria-labelledby="related-articles-heading">
+        <section
+          className="py-12 bg-primary/5"
+          aria-labelledby="related-articles-heading"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="related-articles-heading" className="text-2xl font-bold mb-8">{t.blog.relatedArticles}</h2>
-            
+            <h2
+              id="related-articles-heading"
+              className="text-2xl font-bold mb-8"
+            >
+              {t.blog.relatedArticles}
+            </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {relatedPosts.map(relatedPost => (
+              {relatedPosts.map((relatedPost) => (
                 <Card key={relatedPost.id} className="h-full flex flex-col">
                   <div className="relative h-48 w-full">
                     <Image
@@ -746,10 +828,16 @@ export default function BlogPostPage() {
                       <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
                         {relatedPost.category}
                       </Badge>
-                      <span className="text-xs text-muted-foreground">{formatDate(relatedPost.date, language)}</span>
+                      <span className="text-xs text-muted-foreground">
+                        {formatDate(relatedPost.date, language)}
+                      </span>
                     </div>
-                    <CardTitle className="text-xl">{relatedPost.title}</CardTitle>
-                    <CardDescription className="line-clamp-2">{relatedPost.excerpt}</CardDescription>
+                    <CardTitle className="text-xl">
+                      {relatedPost.title}
+                    </CardTitle>
+                    <CardDescription className="line-clamp-2">
+                      {relatedPost.excerpt}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">

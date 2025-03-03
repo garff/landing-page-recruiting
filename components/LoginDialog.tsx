@@ -41,13 +41,24 @@ export function LoginDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" size="sm" className="text-xs sm:text-sm sm:size-default" aria-label={t.navbar.login}>
+        <Button
+          variant="outline"
+          size="sm"
+          className="text-xs sm:text-sm sm:size-default"
+          aria-label={t.navbar.login}
+        >
           {t.navbar.login}
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+      <DialogContent
+        className="sm:max-w-[425px]"
+        aria-labelledby="dialog-title"
+        aria-describedby="dialog-description"
+      >
         <DialogHeader>
-          <DialogTitle id="dialog-title">{isSignUp ? t.login.signup : t.login.login}</DialogTitle>
+          <DialogTitle id="dialog-title">
+            {isSignUp ? t.login.signup : t.login.login}
+          </DialogTitle>
           <DialogDescription id="dialog-description">
             {isSignUp ? t.login.signupDescription : t.login.loginDescription}
           </DialogDescription>
@@ -57,7 +68,10 @@ export function LoginDialog() {
             <div className="space-y-2">
               <Label htmlFor="name">{t.login.fullName}</Label>
               <div className="relative">
-                <User className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" aria-hidden="true" />
+                <User
+                  className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground"
+                  aria-hidden="true"
+                />
                 <Input
                   id="name"
                   type="text"
@@ -74,7 +88,10 @@ export function LoginDialog() {
           <div className="space-y-2">
             <Label htmlFor="email">{t.login.email}</Label>
             <div className="relative">
-              <Mail className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" aria-hidden="true" />
+              <Mail
+                className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground"
+                aria-hidden="true"
+              />
               <Input
                 id="email"
                 type="email"
@@ -91,7 +108,10 @@ export function LoginDialog() {
           <div className="space-y-2">
             <Label htmlFor="password">{t.login.password}</Label>
             <div className="relative">
-              <Lock className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" aria-hidden="true" />
+              <Lock
+                className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground"
+                aria-hidden="true"
+              />
               <Input
                 id="password"
                 type="password"
@@ -101,7 +121,7 @@ export function LoginDialog() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 aria-required="true"
-                autoComplete={isSignUp ? "new-password" : "current-password"}
+                autoComplete={isSignUp ? 'new-password' : 'current-password'}
               />
             </div>
           </div>
@@ -112,12 +132,19 @@ export function LoginDialog() {
               </Button>
             )}
             <div className={!isSignUp ? '' : 'ml-auto'}>
-              <Button type="submit">{isSignUp ? t.login.signUp : t.login.signIn}</Button>
+              <Button type="submit">
+                {isSignUp ? t.login.signUp : t.login.signIn}
+              </Button>
             </div>
           </div>
           <div className="text-center text-sm text-muted-foreground">
             {isSignUp ? t.login.alreadyHaveAccount : t.login.dontHaveAccount}{' '}
-            <Button type="button" variant="link" className="px-1.5" onClick={toggleForm}>
+            <Button
+              type="button"
+              variant="link"
+              className="px-1.5"
+              onClick={toggleForm}
+            >
               {isSignUp ? t.login.signIn : t.login.signUp}
             </Button>
           </div>

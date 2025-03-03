@@ -1,6 +1,12 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 import { translations, Translation } from './translations';
 
 type LanguageContextType = {
@@ -41,7 +47,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, t, setLanguage: handleSetLanguage }}>
+    <LanguageContext.Provider
+      value={{ language, t, setLanguage: handleSetLanguage }}
+    >
       {children}
     </LanguageContext.Provider>
   );

@@ -25,12 +25,12 @@ const languages: Language[] = [
 export function LanguageDropdown() {
   const { language, setLanguage } = useLanguage();
   const [currentLanguage, setCurrentLanguage] = useState<Language>(
-    languages.find(lang => lang.code === language) || languages[1]
+    languages.find((lang) => lang.code === language) || languages[1]
   );
 
   useEffect(() => {
     // Update the current language when the context language changes
-    const langObj = languages.find(lang => lang.code === language);
+    const langObj = languages.find((lang) => lang.code === language);
     if (langObj) {
       setCurrentLanguage(langObj);
     }
@@ -44,14 +44,19 @@ export function LanguageDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="sm" 
+        <Button
+          variant="outline"
+          size="sm"
           className="h-8 gap-1 px-2 border rounded-md flex items-center"
           aria-label={`Select language: currently ${currentLanguage.name}`}
         >
-          <span className="text-base" aria-hidden="true">{currentLanguage.flag}</span>
-          <ChevronDown className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+          <span className="text-base" aria-hidden="true">
+            {currentLanguage.flag}
+          </span>
+          <ChevronDown
+            className="h-4 w-4 text-muted-foreground"
+            aria-hidden="true"
+          />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-40">
@@ -64,7 +69,9 @@ export function LanguageDropdown() {
             role="menuitem"
           >
             <span className="flex items-center gap-2">
-              <span className="text-base" aria-hidden="true">{language.flag}</span>
+              <span className="text-base" aria-hidden="true">
+                {language.flag}
+              </span>
               <span className="text-sm">{language.name}</span>
             </span>
             {currentLanguage.code === language.code && (
