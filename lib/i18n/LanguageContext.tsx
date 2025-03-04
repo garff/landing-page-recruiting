@@ -7,7 +7,7 @@ import React, {
   useEffect,
   ReactNode,
 } from 'react';
-import { translations, Translation } from './translations';
+import { translations, Translation } from './translations/translations';
 
 type LanguageContextType = {
   language: string;
