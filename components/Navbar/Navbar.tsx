@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { LoginDialog } from '@/components/LoginDialog';
-import { LanguageDropdown } from '@/components/LanguageDropdown';
+import { LoginDialog } from '@/components/LoginDialog/LoginDialog';
+import { LanguageDropdown } from '@/components/LanguageDropdown/LanguageDropdown';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export function Navbar() {

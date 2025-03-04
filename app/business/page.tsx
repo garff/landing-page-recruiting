@@ -24,7 +24,7 @@ import {
   Activity,
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { PricingPopup } from '@/components/PricingPopup';
+import { PricingPopup } from '@/components/PricingPopup/PricingPopup';
 
 export default function BusinessPage() {
   const { t } = useLanguage();

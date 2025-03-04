@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { CookieConsent } from '@/components/CookieConsent';
+import { Navbar } from '@/components/Navbar/Navbar';
+import { Footer } from '@/components/Footer/Footer';
+import { CookieConsent } from '@/components/CookieConsent/CookieConsent';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 
 const inter = Inter({ subsets: ['latin'] });
