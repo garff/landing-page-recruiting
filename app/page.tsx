@@ -15,7 +15,6 @@ import {
   CheckCircle,
   BriefcaseBusiness,
   FileText,
-  Users,
   Sparkles,
   ArrowRight,
   Star,
@@ -44,7 +43,7 @@ export default function Home() {
                 id="hero-heading"
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
               >
-                {t.home.hero.title}{' '}
+                {t.home.hero.title} <br />
                 <span className="text-primary">
                   {t.home.hero.titleHighlight}
                 </span>{' '}
@@ -52,6 +51,10 @@ export default function Home() {
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 {t.home.hero.description}
+                <span className="text-primary">
+                  <b>{t.home.hero.descriptionHighlight}</b>
+                </span>{' '}
+                {t.home.hero.descriptionEnd}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center sm:justify-center md:justify-start">
                 <Link href="/try" className="w-2/3 sm:w-auto">
@@ -620,6 +623,10 @@ export default function Home() {
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {t.home.cta.description}
+            <span className="text-primary">
+              <b>{t.home.cta.descriptionHighlight}</b>
+            </span>{' '}
+            {t.home.cta.descriptionEnd}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/try" className="w-2/3 mx-auto sm:w-auto sm:mx-0">

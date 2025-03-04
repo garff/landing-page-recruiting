@@ -170,7 +170,6 @@ export default function BlogPage() {
 
   // Get the translated category name for a post
   const getTranslatedCategory = (categoryKey: string) => {
-    console.log(t);
     switch (categoryKey) {
       case 'aiTechnology':
         return t.blog.categories.aiTechnology;

@@ -27,6 +27,8 @@ export type Translation = {
       titleHighlight: string;
       titleEnd: string;
       description: string;
+      descriptionHighlight: string;
+      descriptionEnd: string;
       createResume: string;
       forEmployers: string;
     };
@@ -102,6 +104,8 @@ export type Translation = {
     cta: {
       title: string;
       description: string;
+      descriptionHighlight: string;
+      descriptionEnd: string;
       createResume: string;
       forEmployers: string;
       stats: {
@@ -290,7 +294,7 @@ export const translations: Record<string, Translation> = {
     navbar: {
       login: 'Login',
       tryNow: 'Try Now',
-      employers: 'Employers',
+      employers: 'For Employers',
       blog: 'Blog',
     },
     footer: {
@@ -311,11 +315,13 @@ export const translations: Record<string, Translation> = {
       hero: {
         badge: 'AI-Powered Career Solutions',
         badge2: 'AI-powered',
-        title: 'Your Career,',
+        title: 'Your Job Search,',
         titleHighlight: 'Elevated',
-        titleEnd: ' by AI',
-        description:
-          'Create professional resumes and job applications for free with our AI tools. Connect with top employers looking for talent just like you.',
+        titleEnd: 'by AI',
+        description: 'Create professional resumes and job applications',
+        descriptionHighlight: ' for free',
+        descriptionEnd:
+          ' with our AI tools. Connect with top employers looking for talent just like you.',
         createResume: 'Create Your Resume',
         forEmployers: 'For Employers',
       },
@@ -327,7 +333,7 @@ export const translations: Record<string, Translation> = {
           title: 'AI Resume Builder',
           description: 'Create professional resumes in minutes',
           feature1: 'AI-powered content suggestions',
-          feature2: 'Multiple professional templates',
+          feature2: 'Professional templates',
           feature3: 'ATS-optimized formats',
           cta: 'Build Your Resume',
         },
@@ -335,9 +341,9 @@ export const translations: Record<string, Translation> = {
           badge: 'Popular',
           title: 'AI Application Assistant',
           description: 'Personalized cover letters & applications',
-          feature1: 'Job-specific cover letters',
-          feature2: 'Keyword optimization for each role',
-          feature3: 'Follow-up email templates',
+          feature1: 'AI-written job applications',
+          feature2: 'Job-specific cover letters',
+          feature3: 'Keyword optimization for each role',
           cta: 'Create Application',
         },
         talentMatching: {
@@ -345,7 +351,7 @@ export const translations: Record<string, Translation> = {
           description: 'Connect with your ideal employer',
           feature1: 'AI-powered job matching',
           feature2: 'Direct connections with employers',
-          feature3: 'Personalized opportunity alerts',
+          feature3: 'Get headhuntet by companies',
           cta: 'Open Up Opportunities',
         },
       },
@@ -637,7 +643,7 @@ export const translations: Record<string, Translation> = {
     navbar: {
       login: 'Log ind',
       tryNow: 'Prøv nu',
-      employers: 'Arbejdsgivere',
+      employers: 'For Arbejdsgivere',
       blog: 'Blog',
     },
     footer: {
@@ -658,23 +664,25 @@ export const translations: Record<string, Translation> = {
       hero: {
         badge: 'AI-drevne karriereløsninger',
         badge2: 'AI-drevet',
-        title: 'Din karriere,',
+        title: 'Din jobsøgning,\n',
         titleHighlight: 'Løftet',
-        titleEnd: ' af AI',
-        description:
-          "Opret professionelle CV'er og jobansøgninger gratis med vores AI-værktøjer. Forbind med toparbejdsgivere, der leder efter talent som dig.",
+        titleEnd: 'af AI',
+        description: "Opret professionelle CV'er og jobansøgninger",
+        descriptionHighlight: ' gratis',
+        descriptionEnd:
+          ' med vores AI-værktøjer. Forbind med arbejdsgivere, der leder efter talent som dig.',
         createResume: 'Opret dit CV',
         forEmployers: 'For arbejdsgivere',
       },
       features: {
         title: 'Sådan fungerer det',
         description:
-          'Sig farvel til at oprette hundredvis af jobansøgninger. Vores AI-teknologi matcher automatisk dine ansøgninger med lignende stillinger. Arbejdsgivere kontakter dig direkte gennem vores platform. Jo flere ansøgninger du opretter, jo bredere bliver din rækkevidde. Apply smarter, not harder.',
+          'Sig farvel til at oprette hundredvis af jobansøgninger. Vores AI-teknologi matcher automatisk dine ansøgninger med lignende stillinger. Arbejdsgivere kontakter dig direkte gennem vores platform. Jo flere ansøgninger du opretter, jo større bliver din rækkevidde. Apply smarter, not harder.',
         resumeBuilder: {
           title: 'AI CV-bygger',
           description: "Opret professionelle CV'er på få minutter",
           feature1: 'AI-drevne indholdsforslag',
-          feature2: 'Flere professionelle skabeloner',
+          feature2: 'Professionelle skabeloner',
           feature3: 'ATS-optimerede formater',
           cta: 'Byg dit CV',
         },
@@ -682,17 +690,17 @@ export const translations: Record<string, Translation> = {
           badge: 'Populær',
           title: 'AI-ansøgningsassistent',
           description: 'Personlige følgebreve og ansøgninger',
-          feature1: 'Jobspecifikke følgebreve',
-          feature2: 'Nøgleordsoptimering til hver rolle',
-          feature3: 'Opfølgnings-e-mail-skabeloner',
+          feature1: 'AI-skrevne jobansøgninger',
+          feature2: 'Jobspecifikke følgebreve',
+          feature3: 'Nøgleordsoptimering til hver rolle',
           cta: 'Opret ansøgning',
         },
         talentMatching: {
           title: 'Talentmatchning',
           description: 'Forbind med din ideelle arbejdsgiver',
           feature1: 'AI-drevet jobmatchning',
-          feature2: 'Direkte forbindelser med arbejdsgivere',
-          feature3: 'Personlige muligheds-adviseringer',
+          feature2: 'Direkte forbindelser til arbejdsgivere',
+          feature3: 'Bliv headhuntet af virksomheder',
           cta: 'Åbn op for muligheder',
         },
       },
@@ -745,9 +753,11 @@ export const translations: Record<string, Translation> = {
         cta: 'Start rekruttering',
       },
       cta: {
-        title: 'Klar til at transformere din karriere?',
+        title: 'Klar til at transformere din jobsøgning?',
         description:
-          'Slut dig til tusindvis af jobsøgende, der har fundet deres drømmestillinger ved hjælp af vores AI-drevne platform. Det er helt gratis at oprette dit CV og jobansøgninger for at søge job.',
+          'Slut dig de mange jobsøgende, der har fundet deres drømmestillinger ved hjælp af vores AI-drevne platform. Vi hjælper dig med at matche med den rigtige arbejdsgiver. Det er',
+        descriptionHighlight: ' gratis',
+        descriptionEnd: ' at oprette dit CV og dine jobansøgninger.',
         createResume: 'Opret dit CV',
         forEmployers: 'For arbejdsgivere',
         stats: {
