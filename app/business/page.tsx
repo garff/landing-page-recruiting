@@ -439,6 +439,9 @@ export default function BusinessPage() {
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {t.business.cta.description}
+            <span className="text-primary">
+              <b>{t.business.cta.descriptionHighlight}</b>
+            </span>
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

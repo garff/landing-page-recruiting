@@ -175,6 +175,7 @@ export type Translation = {
     cta: {
       title: string;
       description: string;
+      descriptionHighlight: string;
       startTrial: string;
       seeDemo: string;
     };
@@ -216,12 +217,6 @@ export type Translation = {
           limitations: string[];
         };
         professional: {
-          name: string;
-          description: string;
-          features: string[];
-          limitations: string[];
-        };
-        enterprise: {
           name: string;
           description: string;
           features: string[];
@@ -406,7 +401,10 @@ export const translations: Record<string, Translation> = {
       cta: {
         title: 'Ready to Transform Your Career?',
         description:
-          "Join thousands of job seekers who have found their dream positions using our AI-powered platform. It's completely free to create your resume and job applications to apply for jobs.",
+          "Join thousands of job seekers who have found their dream positions using our AI-powered platform. It's completely",
+        descriptionHighlight: ' free',
+        descriptionEnd:
+          'to create your resume and job applications to apply for jobs.',
         createResume: 'Create Your Resume',
         forEmployers: 'For Employers',
         stats: {
@@ -444,7 +442,7 @@ export const translations: Record<string, Translation> = {
       screen: {
         badge: 'Popular',
         title: 'Screen & Interview',
-        description: 'Evaluate and interview top candidates',
+        description: 'Evaluate and interview candidates',
         feature1: 'AI-powered application screening',
         feature2: 'Automated CV assessment tool',
         feature3: 'Integrated video interview platform',
@@ -453,7 +451,7 @@ export const translations: Record<string, Translation> = {
       analytics: {
         title: 'Analytics & Insights',
         description: 'Data-driven recruitment decisions',
-        feature1: 'Recruitment performance metrics',
+        feature1: 'Recruitment evalutions',
         feature2: 'AI Candidate tracking',
         feature3: 'Reporting dashboard',
         cta: 'Learn More',
@@ -480,7 +478,8 @@ export const translations: Record<string, Translation> = {
       cta: {
         title: 'Ready to Transform Your Hiring Process?',
         description:
-          'Join thousands of companies that have streamlined their recruitment with our AI-powered platform. Get started today with a free trial.',
+          'Join the many companies that have streamlined their recruitment with our AI-powered platform. Get started today with a',
+        descriptionHighlight: ' 14-days free trial.',
         startTrial: 'Start Free Trial',
         seeDemo: 'See Demo',
       },
@@ -553,24 +552,6 @@ export const translations: Record<string, Translation> = {
               'Video interview platform',
               'Candidate skill assessments',
               'Custom application forms',
-            ],
-            limitations: [],
-          },
-          enterprise: {
-            name: 'Enterprise',
-            description:
-              'Tailored solutions for large organizations with complex hiring needs.',
-            features: [
-              'Unlimited job postings',
-              'Premium AI candidate matching',
-              'Dedicated account manager',
-              'Premium company profile',
-              'Advanced analytics & reporting',
-              'Custom integration options',
-              'Bulk hiring tools',
-              'Employer branding solutions',
-              'API access',
-              'Custom workflows',
             ],
             limitations: [],
           },
@@ -795,7 +776,7 @@ export const translations: Record<string, Translation> = {
       screen: {
         badge: 'Populær',
         title: 'Screening & Interview',
-        description: 'Evaluer og interview topkandidater',
+        description: 'Evaluer og interview kandidater',
         feature1: 'AI-drevet ansøgningsscreening',
         feature2: 'Automatiseret CV-vurderingsværktøj',
         feature3: 'Integreret videointerviewplatform',
@@ -804,7 +785,7 @@ export const translations: Record<string, Translation> = {
       analytics: {
         title: 'Analyse & Indsigt',
         description: 'Datadrevne rekrutteringsbeslutninger',
-        feature1: 'Rekrutteringsydelsesmålinger',
+        feature1: 'Rekruteringsevalueringer',
         feature2: 'AI-kandidatsporing',
         feature3: 'Rapporteringsdashboard',
         cta: 'Lær mere',
@@ -831,7 +812,8 @@ export const translations: Record<string, Translation> = {
       cta: {
         title: 'Klar til at transformere din ansættelsesproces?',
         description:
-          'Slut dig til tusindvis af virksomheder, der har strømlinet deres rekruttering med vores AI-drevne platform. Kom i gang i dag med en gratis prøveperiode.',
+          'Slut jer de mange virksomheder, der har strømlinet deres rekruttering med vores AI-drevne platform. Kom i gang i dag med en',
+        descriptionHighlight: ' 14-dages gratis prøveperiode.',
         startTrial: 'Start gratis prøveperiode',
         seeDemo: 'Se demo',
       },
@@ -904,24 +886,6 @@ export const translations: Record<string, Translation> = {
               'Videointerviewplatform',
               'Kandidatfærdighedsvurderinger',
               'Tilpassede ansøgningsformularer',
-            ],
-            limitations: [],
-          },
-          enterprise: {
-            name: 'Enterprise',
-            description:
-              'Skræddersyede løsninger til store organisationer med komplekse ansættelsesbehov.',
-            features: [
-              'Ubegrænsede jobopslag',
-              'Premium AI-kandidatmatchning',
-              'Dedikeret account manager',
-              'Premium virksomhedsprofil',
-              'Avanceret analyse og rapportering',
-              'Tilpassede integrationsløsninger',
-              'Værktøjer til masseansættelse',
-              'Employer branding-løsninger',
-              'API-adgang',
-              'Tilpassede arbejdsgange',
             ],
             limitations: [],
           },
