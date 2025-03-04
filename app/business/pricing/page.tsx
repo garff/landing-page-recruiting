@@ -322,10 +322,12 @@ export default function PricingPage() {
                 </tr>
                 <tr className="border-b">
                   <td className="py-4 px-6 text-sm">
-                    {t.business.pricing.plans.starter.limitations[0].replace(
-                      'No ',
-                      ''
-                    )}
+                    {`${t.business.pricing.plans.starter.limitations[0]
+                      .replace('No ', '')
+                      .charAt(0)
+                      .toUpperCase()}${t.business.pricing.plans.starter.limitations[0]
+                      .replace('No ', '')
+                      .slice(1)}`}
                   </td>
                   <td className="py-4 px-6 text-center text-sm">
                     <X
@@ -359,10 +361,12 @@ export default function PricingPage() {
                 </tr>
                 <tr className="border-b">
                   <td className="py-4 px-6 text-sm">
-                    {t.business.pricing.plans.starter.limitations[2].replace(
-                      'No ',
-                      ''
-                    )}
+                    {`${t.business.pricing.plans.starter.limitations[2]
+                      .replace('No ', '')
+                      .charAt(0)
+                      .toUpperCase()}${t.business.pricing.plans.starter.limitations[2]
+                      .replace('No ', '')
+                      .slice(1)}`}
                   </td>
                   <td className="py-4 px-6 text-center text-sm">
                     <X
@@ -371,8 +375,8 @@ export default function PricingPage() {
                     />
                   </td>
                   <td className="py-4 px-6 text-center text-sm">
-                    <X
-                      className="h-5 w-5 text-muted-foreground mx-auto"
+                    <CheckCircle
+                      className="h-5 w-5 text-primary mx-auto"
                       aria-hidden="true"
                     />
                   </td>
@@ -452,6 +456,10 @@ export default function PricingPage() {
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {t.business.pricing.ctaDescription}
+            <span className="text-primary">
+              <b>{t.business.pricing.ctaDescriptionHighlight}</b>
+            </span>{' '}
+            {t.business.pricing.ctaDescriptionEnd}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

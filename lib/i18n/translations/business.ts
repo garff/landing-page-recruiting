@@ -91,6 +91,8 @@ export type BusinessTranslation = {
     };
     ctaTitle: string;
     ctaDescription: string;
+    ctaDescriptionHighlight: string;
+    ctaDescriptionEnd: string;
     plans: {
       starter: {
         name: string;
@@ -216,8 +218,9 @@ export const business: {
           'Ja, vi tilbyder særlige priser for non-profit organisationer og uddannelsesinstitutioner. Kontakt venligst vores salgsteam for mere information.',
       },
       ctaTitle: 'Klar til at transformere din ansættelsesproces?',
-      ctaDescription:
-        'Start din 14-dages gratis prøveperiode i dag. Intet kreditkort kræves for Starter-planen.',
+      ctaDescription: 'Start din',
+      ctaDescriptionHighlight: ' 14-dages gratis prøveperiode',
+      ctaDescriptionEnd: 'i dag.',
       plans: {
         starter: {
           name: 'Starter',
@@ -358,8 +361,9 @@ export const business: {
           'Yes, we offer special pricing for non-profit organizations and educational institutions. Please contact our sales team for more information.',
       },
       ctaTitle: 'Ready to transform your hiring process?',
-      ctaDescription:
-        'Start your 14-day free trial today. No credit card required for the Starter plan.',
+      ctaDescription: 'Start your',
+      ctaDescriptionHighlight: ' 14-day free trial',
+      ctaDescriptionEnd: ' today.',
       plans: {
         starter: {
           name: 'Starter',
