@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -154,9 +154,11 @@ const blogPosts: BlogPost[] = [
 
 export default function BlogPage() {
   const { t, language } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState(
-    t.blog.categories.all
-  );
+  const [selectedCategory, setSelectedCategory] = useState(String);
+
+  useEffect(() => {
+    setSelectedCategory(t.blog.categories.all);
+  }, [language]);
 
   // Categories for filtering with translations
   const categories = [
