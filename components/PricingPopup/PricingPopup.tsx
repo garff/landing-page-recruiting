@@ -63,10 +63,10 @@ export function PricingPopup({ children }: PricingPopupProps) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
-          <DialogTitle className="text-xl sm:text-2xl">
+          <DialogTitle className="text-xl sm:text-2xl text-center">
             {t.business.pricing.title}
           </DialogTitle>
-          <DialogDescription>
+          <DialogDescription className="max-md:w-4/5 max-md:mx-auto text-center">
             {t.business.pricing.description}
           </DialogDescription>
         </DialogHeader>
@@ -75,7 +75,7 @@ export function PricingPopup({ children }: PricingPopupProps) {
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`border rounded-lg p-4 flex flex-col h-full ${plan.popular ? 'border-2 border-primary shadow-md relative' : 'border-border'}`}
+              className={`border rounded-lg p-4 flex flex-col h-full ${plan.popular ? 'border-2 border-primary shadow-md relative' : 'border-border'} max-sm:w-4/5 max-sm:mx-auto`}
             >
               {plan.popular && (
                 <div className="absolute -top-2 -right-2">
@@ -129,11 +129,14 @@ export function PricingPopup({ children }: PricingPopupProps) {
           <Button
             variant="outline"
             onClick={() => setOpen(false)}
-            className="sm:mr-auto"
+            className="max-sm:w-2/3 max-sm:mx-auto"
           >
             {t.business.pricing.close}
           </Button>
-          <Link href="/business/pricing" className="w-full sm:w-auto">
+          <Link
+            href="/business/pricing"
+            className="max-sm:w-2/3 max-sm:mx-auto"
+          >
             <Button className="w-full">
               {t.business.pricing.viewAllPlans}
             </Button>

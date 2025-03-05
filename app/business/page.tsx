@@ -50,11 +50,14 @@ export default function BusinessPage() {
               >
                 {t.home.employers.title}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 max-sm:w-4/5">
                 {t.home.employers.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center sm:justify-center md:justify-start">
-                <Link href="/business/register" className="w-2/3 sm:w-auto">
+                <Link
+                  href="/business/register"
+                  className="w-2/3 max-sm:w-3/5 max-md:w-2/5"
+                >
                   <Button size="lg" className="w-full text-sm sm:text-base">
                     {t.home.employers.cta}{' '}
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
@@ -64,7 +67,7 @@ export default function BusinessPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full text-sm sm:text-base"
+                    className="w-full max-sm:w-3/5 max-md:w-1/3 text-sm sm:text-base"
                   >
                     {t.business.viewPricing}
                   </Button>
@@ -139,13 +142,13 @@ export default function BusinessPage() {
             >
               {t.business.howItWorks.title}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto max-sm:w-4/5">
               {t.business.howItWorks.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-2 border-border hover:border-primary/50 transition-colors">
+            <Card className="border-2 border-border hover:border-primary/50 transition-colors max-md:w-2/3 max-md:mx-auto">
               <CardHeader className="space-y-1 text-center">
                 <div
                   className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-2 mx-auto"
@@ -170,21 +173,27 @@ export default function BusinessPage() {
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.search.feature1}</span>
+                    <span className="break-words">
+                      {t.business.search.feature1}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.search.feature2}</span>
+                    <span className="break-words">
+                      {t.business.search.feature2}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.search.feature3}</span>
+                    <span className="break-words">
+                      {t.business.search.feature3}
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -200,7 +209,7 @@ export default function BusinessPage() {
               </CardFooter>
             </Card>
 
-            <Card className="border-2 border-primary shadow-lg relative">
+            <Card className="border-2 border-primary shadow-lg relative max-md:w-2/3 max-md:mx-auto">
               <div className="absolute -top-3 -right-3">
                 <Badge className="bg-primary text-white text-xs">
                   {t.business.screen.badge}
@@ -230,21 +239,27 @@ export default function BusinessPage() {
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.screen.feature1}</span>
+                    <span className="break-words">
+                      {t.business.screen.feature1}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.screen.feature2}</span>
+                    <span className="break-words">
+                      {t.business.screen.feature2}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.screen.feature3}</span>
+                    <span className="break-words">
+                      {t.business.screen.feature3}
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -257,7 +272,7 @@ export default function BusinessPage() {
               </CardFooter>
             </Card>
 
-            <Card className="border-2 border-border hover:border-primary/50 transition-colors">
+            <Card className="border-2 border-border hover:border-primary/50 transition-colors max-md:w-2/3 max-md:mx-auto">
               <CardHeader className="space-y-1 text-center">
                 <div
                   className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-2 mx-auto"
@@ -282,21 +297,27 @@ export default function BusinessPage() {
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.analytics.feature1}</span>
+                    <span className="break-words">
+                      {t.business.analytics.feature1}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.analytics.feature2}</span>
+                    <span className="break-words">
+                      {t.business.analytics.feature2}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <span>{t.business.analytics.feature3}</span>
+                    <span className="break-words">
+                      {t.business.analytics.feature3}
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -328,13 +349,13 @@ export default function BusinessPage() {
             >
               {t.business.testimonials.title}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto max-sm:w-4/5 sm:w-4/5">
               {t.business.testimonials.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="max-md:w-2/3 max-md:mx-auto">
               <CardContent className="pt-6">
                 <div className="flex flex-col gap-4">
                   <div
@@ -378,7 +399,7 @@ export default function BusinessPage() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="max-md:w-2/3 max-md:mx-auto">
               <CardContent className="pt-6">
                 <div className="flex flex-col gap-4">
                   <div
@@ -437,7 +458,7 @@ export default function BusinessPage() {
           >
             {t.business.cta.title}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 max-md:w-4/5 max-md:mx-auto">
             {t.business.cta.description}
             <span className="text-primary">
               <b>{t.business.cta.descriptionHighlight}</b>
