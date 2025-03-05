@@ -234,7 +234,7 @@ export default function BlogPage() {
             >
               {t.blog.title}
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-md:w-4/5 mx-auto">
               {t.blog.description}
             </p>
           </div>
@@ -272,7 +272,10 @@ export default function BlogPage() {
             aria-labelledby="featured-heading"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 id="featured-heading" className="text-2xl font-bold mb-8">
+              <h2
+                id="featured-heading"
+                className="text-2xl font-bold mb-8 max-md:text-center"
+              >
                 {t.blog.featuredArticle}
               </h2>
               {filteredPosts
@@ -282,7 +285,7 @@ export default function BlogPage() {
                     key={post.id}
                     className="grid md:grid-cols-2 gap-8 items-center"
                   >
-                    <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
+                    <div className="relative h-64 md:h-96 rounded-lg overflow-hidden max-md:w-5/6 max-md:mx-auto">
                       <Image
                         src={post.image}
                         alt={post.title}
@@ -292,14 +295,18 @@ export default function BlogPage() {
                       />
                     </div>
                     <div className="space-y-4">
-                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
-                        {post.category}
-                      </Badge>
-                      <h3 className="text-2xl md:text-3xl font-bold">
+                      <div className="flex max-md:justify-center">
+                        <Badge className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          {post.category}
+                        </Badge>
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-bold max-md:text-center">
                         {post.title}
                       </h3>
-                      <p className="text-muted-foreground">{post.excerpt}</p>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <p className="text-muted-foreground max-md:w-5/6 max-md:mx-auto">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground max-md:w-2/3 max-md:mx-auto max-md:justify-center">
                         <div className="flex items-center">
                           <Calendar
                             className="h-4 w-4 mr-1"
@@ -316,15 +323,20 @@ export default function BlogPage() {
                           <span>{post.author}</span>
                         </div>
                       </div>
-                      <Link href={`/blog/${post.id}`}>
-                        <Button className="mt-2">
-                          {t.blog.readArticle}{' '}
-                          <ArrowRight
-                            className="ml-2 h-4 w-4"
-                            aria-hidden="true"
-                          />
-                        </Button>
-                      </Link>
+                      <div className="flex max-md:justify-center">
+                        <Link
+                          href={`/blog/${post.id}`}
+                          className="w-full flex max-md:justify-center"
+                        >
+                          <Button className="mt-2 max-md:w-2/5">
+                            {t.blog.readArticle}{' '}
+                            <ArrowRight
+                              className="ml-2 h-4 w-4"
+                              aria-hidden="true"
+                            />
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -338,7 +350,10 @@ export default function BlogPage() {
         aria-labelledby="articles-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="articles-heading" className="text-2xl font-bold mb-8">
+          <h2
+            id="articles-heading"
+            className="text-2xl font-bold mb-8 text-center"
+          >
             {selectedCategory !== t.blog.categories.all
               ? `${selectedCategory} ${t.blog.latestArticles}`
               : t.blog.latestArticles}
@@ -367,7 +382,10 @@ export default function BlogPage() {
                     !post.featured || selectedCategory !== t.blog.categories.all
                 )
                 .map((post) => (
-                  <Card key={post.id} className="h-full flex flex-col">
+                  <Card
+                    key={post.id}
+                    className="h-full flex flex-col max-md:w-4/5 max-md:mx-auto"
+                  >
                     <div className="relative h-48 w-full">
                       <Image
                         src={post.image}
