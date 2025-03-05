@@ -49,7 +49,7 @@ export default function Home() {
                 </span>{' '}
                 {t.home.hero.titleEnd}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl max-md:w-5/6 mx-auto">
                 {t.home.hero.description}
                 <span className="text-primary">
                   <b>{t.home.hero.descriptionHighlight}</b>
@@ -120,7 +120,7 @@ export default function Home() {
             >
               {t.home.features.title}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto w-4/5 sm:w-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl w-4/5 max-md:w-5/6 mx-auto">
               {t.home.features.description}
             </p>
           </div>
@@ -141,26 +141,26 @@ export default function Home() {
                   {t.home.features.resumeBuilder.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex justify-center sm:justify-center md:justify-start">
                 <ul
-                  className="space-y-2 text-sm sm:text-base"
+                  className="space-y-2 text-sm sm:text-base justify-center"
                   aria-label="Resume Builder Features"
                 >
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{t.home.features.resumeBuilder.feature1}</span>
                   </li>
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{t.home.features.resumeBuilder.feature2}</span>
                   </li>
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
@@ -201,26 +201,26 @@ export default function Home() {
                   {t.home.features.applicationAssistant.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex justify-center sm:justify-center md:justify-start">
                 <ul
                   className="space-y-2 text-sm sm:text-base"
                   aria-label="Application Assistant Features"
                 >
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{t.home.features.applicationAssistant.feature1}</span>
                   </li>
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{t.home.features.applicationAssistant.feature2}</span>
                   </li>
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
@@ -253,26 +253,26 @@ export default function Home() {
                   {t.home.features.talentMatching.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex justify-center sm:justify-center md:justify-start">
                 <ul
                   className="space-y-2 text-sm sm:text-base"
                   aria-label="Talent Matching Features"
                 >
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start justify-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{t.home.features.talentMatching.feature1}</span>
                   </li>
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start justify-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{t.home.features.talentMatching.feature2}</span>
                   </li>
-                  <li className="flex items-start justify-start pl-[50px] sm:pl-[50px] md:justify-start md:pl-0">
+                  <li className="flex items-start justify-start">
                     <CheckCircle
                       className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
                       aria-hidden="true"
@@ -309,7 +309,7 @@ export default function Home() {
             >
               {t.home.testimonials.title}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto max-md:w-5/6">
               {t.home.testimonials.description}
             </p>
           </div>
@@ -552,53 +552,58 @@ export default function Home() {
               >
                 {t.home.employers.title}
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground text-center sm:text-center md:text-left">
+              <p className="text-base sm:text-lg text-muted-foreground text-center sm:text-center md:text-left max-md:w-5/6 mx-auto">
                 {t.home.employers.description}
               </p>
-              <ul className="space-y-4" aria-label="Employer features">
-                <li className="flex items-start pl-[50px] sm:pl-[70px] md:pl-0 md:justify-start">
-                  <CheckCircle
-                    className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5"
-                    aria-hidden="true"
-                  />
-                  <div className="sm:text-left">
-                    <p className="font-medium text-sm sm:text-base">
-                      {t.home.employers.feature1.title}
-                    </p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      {t.home.employers.feature1.description}
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start pl-[50px] sm:pl-[70px] md:pl-0 md:justify-start">
-                  <CheckCircle
-                    className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5"
-                    aria-hidden="true"
-                  />
-                  <div className="sm:text-left">
-                    <p className="font-medium text-sm sm:text-base">
-                      {t.home.employers.feature2.title}
-                    </p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      {t.home.employers.feature2.description}
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start pl-[50px] sm:pl-[70px] md:pl-0 md:justify-start">
-                  <CheckCircle
-                    className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5"
-                    aria-hidden="true"
-                  />
-                  <div className="sm:text-left">
-                    <p className="font-medium text-sm sm:text-base">
-                      {t.home.employers.feature3.title}
-                    </p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      {t.home.employers.feature3.description}
-                    </p>
-                  </div>
-                </li>
-              </ul>
+              <div className="flex justify-center sm:justify-center md:justify-start">
+                <ul
+                  className="space-y-4 max-sm:justify-center max-md:w-5/6"
+                  aria-label="Employer features"
+                >
+                  <li className="flex items-start">
+                    <CheckCircle
+                      className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    />
+                    <div className="sm:text-left">
+                      <p className="font-medium text-sm sm:text-base">
+                        {t.home.employers.feature1.title}
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">
+                        {t.home.employers.feature1.description}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle
+                      className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    />
+                    <div className="sm:text-left">
+                      <p className="font-medium text-sm sm:text-base">
+                        {t.home.employers.feature2.title}
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">
+                        {t.home.employers.feature2.description}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle
+                      className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    />
+                    <div className="sm:text-left">
+                      <p className="font-medium text-sm sm:text-base">
+                        {t.home.employers.feature3.title}
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">
+                        {t.home.employers.feature3.description}
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
               <div className="pt-4 flex justify-center sm:justify-center md:justify-start">
                 <Link
                   href="/business"
@@ -621,7 +626,7 @@ export default function Home() {
           <h2 id="cta-heading" className="text-2xl sm:text-3xl font-bold mb-6">
             {t.home.cta.title}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 max-md:w-5/6 mx-auto">
             {t.home.cta.description}
             <span className="text-primary">
               <b>{t.home.cta.descriptionHighlight}</b>

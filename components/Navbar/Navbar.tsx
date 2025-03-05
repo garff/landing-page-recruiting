@@ -51,8 +51,8 @@ export function Navbar() {
             >
               {t.navbar.employers}
             </Link>
-            <Link href="/try" aria-label="Try Now">
-              <Button size="sm" className="text-xs sm:text-sm sm:size-default">
+            <Link href="/try" className="max-sm:hidden" aria-label="Try Now">
+              <Button size="sm" className="text-xs">
                 {t.navbar.tryNow}
               </Button>
             </Link>
