@@ -19,17 +19,17 @@ export function Navbar() {
             <Link
               href="/"
               className="flex items-center space-x-2"
-              aria-label="JobPortalen Home"
+              aria-label=" JobPlatformen Home"
             >
               <Image
                 src="/logo.png"
-                alt="JobPortalen Logo"
+                alt=" JobPlatformen Logo"
                 width={32}
                 height={32}
                 className="h-8 w-auto"
               />
               <span className="font-bold text-xl">
-                Jo<span className="text-primary">b</span>Portalen
+                Jo<span className="text-primary">b</span>Platformen
               </span>
             </Link>
           </div>

@@ -19,7 +19,7 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <Image
                 src="/logo.png"
-                alt="JobPortalen Logo"
+                alt=" JobPlatformen Logo"
                 width={32}
                 height={32}
                 className="h-7 sm:h-8 w-auto"
@@ -110,7 +110,7 @@ export function Footer() {
 
         <div className="border-t mt-12 pt-8">
           <p className="text-xs sm:text-sm text-center text-muted-foreground">
-            © {new Date().getFullYear()} JobPortalen.{' '}
+            © {new Date().getFullYear()} JobPlatformen.{' '}
             {t.footer.allRightsReserved}
           </p>
         </div>

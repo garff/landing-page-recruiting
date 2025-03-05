@@ -37,7 +37,7 @@ export const blog: {
   en: BlogTranslation;
 } = {
   da: {
-    title: 'JobPortalen Blog',
+    title: ' JobPlatformen Blog',
     description:
       'Indsigt, tips og tendenser til at hjælpe dig med at navigere i din karriererejse og finde dit perfekte jobmatch.',
     searchPlaceholder: 'Søg i artikler...',
@@ -49,7 +49,7 @@ export const blog: {
       'Abonner på vores nyhedsbrev for at modtage de seneste karriereråd, jobsøgningstips og brancheindsigter.',
     subscribe: 'Abonner',
     privacyNotice:
-      'Ved at abonnere accepterer du vores privatlivspolitik og samtykker til at modtage opdateringer fra JobPortalen.',
+      'Ved at abonnere accepterer du vores privatlivspolitik og samtykker til at modtage opdateringer fra  JobPlatformen.',
     backToBlog: 'Tilbage til blog',
     relatedArticles: 'Relaterede artikler',
     helpful: 'Nyttig',
@@ -73,7 +73,7 @@ export const blog: {
     },
   },
   en: {
-    title: 'JobPortalen Blog',
+    title: ' JobPlatformen Blog',
     description:
       'Insights, tips, and trends to help you navigate your career journey and find your perfect job match.',
     searchPlaceholder: 'Search articles...',
@@ -85,7 +85,7 @@ export const blog: {
       'Subscribe to our newsletter to receive the latest career advice, job search tips, and industry insights.',
     subscribe: 'Subscribe',
     privacyNotice:
-      'By subscribing, you agree to our Privacy Policy and consent to receive updates from JobPortalen.',
+      'By subscribing, you agree to our Privacy Policy and consent to receive updates from  JobPlatformen.',
     backToBlog: 'Back to Blog',
     relatedArticles: 'Related Articles',
     helpful: 'Helpful',

@@ -9,7 +9,7 @@ import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'JobPortalen - AI-Powered Career Solutions',
+  title: 'JobPlatformen - AI-Powered Career Solutions',
   description:
     'Create professional resumes and job applications with AI tools. Connect with employers looking for talent like you.',
 };
