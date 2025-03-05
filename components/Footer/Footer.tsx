@@ -25,7 +25,7 @@ export function Footer() {
                 className="h-7 sm:h-8 w-auto"
               />
               <span className="font-bold text-lg sm:text-xl">
-                Jo<span className="text-primary">b</span>Portalen
+                Jo<span className="text-primary">b</span>Platformen
               </span>
             </div>
             <p className="mt-4 text-xs sm:text-sm text-muted-foreground">
