@@ -7,6 +7,11 @@ export type LoginTranslation = {
   password: string;
   fullName: string;
   forgotPassword: string;
+  forgotPasswordTitle: string;
+  forgotPasswordDescription: string;
+  forgotPasswordSuccess: string;
+  backToLogin: string;
+  resetPassword: string;
   signIn: string;
   signUp: string;
   alreadyHaveAccount: string;
@@ -27,6 +32,13 @@ export const login: {
     password: 'Adgangskode',
     fullName: 'Fulde navn',
     forgotPassword: 'Glemt adgangskode?',
+    forgotPasswordTitle: 'Nulstil din adgangskode',
+    forgotPasswordDescription:
+      'Indtast din e-mail-adresse, og vi sender dig et link til at nulstille din adgangskode.',
+    forgotPasswordSuccess:
+      'Hvis der findes en konto med denne e-mail, vil du modtage instruktioner til nulstilling af adgangskode snart.',
+    backToLogin: 'Tilbage til login',
+    resetPassword: 'Nulstil adgangskode',
     signIn: 'Log ind',
     signUp: 'Tilmeld dig',
     alreadyHaveAccount: 'Har du allerede en konto?',
@@ -41,6 +53,13 @@ export const login: {
     password: 'Password',
     fullName: 'Full Name',
     forgotPassword: 'Forgot password?',
+    forgotPasswordTitle: 'Reset your password',
+    forgotPasswordDescription:
+      "Enter your email address and we'll send you a link to reset your password.",
+    forgotPasswordSuccess:
+      'If an account exists with this email, you will receive password reset instructions shortly.',
+    backToLogin: 'Back to login',
+    resetPassword: 'Reset password',
     signIn: 'Sign in',
     signUp: 'Sign up',
     alreadyHaveAccount: 'Already have an account?',
