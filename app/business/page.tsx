@@ -21,7 +21,6 @@ import {
   Briefcase,
   Search,
   BarChart,
-  Activity,
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { PricingPopup } from '@/components/PricingPopup/PricingPopup';

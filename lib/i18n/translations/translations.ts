@@ -6,6 +6,7 @@ import { TryNowTranslation, tryNow } from './tryNow';
 import { BlogTranslation, blog } from './blog';
 import { CookieConsentTranslation, cookieConsent } from './cookieConsent';
 import { LoginTranslation, login } from './login';
+import { resetPassword, ResetPasswordTranslation } from './resetPassword';
 
 export type Translation = {
   language: string;
@@ -17,6 +18,7 @@ export type Translation = {
   blog: BlogTranslation;
   cookieConsent: CookieConsentTranslation;
   login: LoginTranslation;
+  resetPassword: ResetPasswordTranslation;
 };
 
 export const translations: Record<string, Translation> = {
@@ -30,6 +32,7 @@ export const translations: Record<string, Translation> = {
     blog: blog['en'],
     cookieConsent: cookieConsent['en'],
     login: login['en'],
+    resetPassword: resetPassword['en'],
   },
   da: {
     language: 'da',
@@ -41,5 +44,6 @@ export const translations: Record<string, Translation> = {
     blog: blog['da'],
     cookieConsent: cookieConsent['da'],
     login: login['da'],
+    resetPassword: resetPassword['da'],
   },
 };

@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { ForgotPasswordDialog } from '@/components/ForgotPasswordDialog/ForgotPasswordDialog';
+import { getBaseAuthURL } from '@/lib/baseUrls';
 
 const LoginDialog = () => {
   const { t } = useLanguage();
@@ -173,11 +174,6 @@ const LoginDialog = () => {
     }
   };
 
-  const getAuthApiUrl = (endpoint: string) => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_AUTH_URL;
-    return `${baseUrl}/${endpoint}`;
-  };
-
   const handleLoginSubmit = async () => {
     if (!formRef.current) return;
 
@@ -186,7 +182,7 @@ const LoginDialog = () => {
     const password = formData.get('password');
 
     try {
-      const response = await fetch(getAuthApiUrl('login'), {
+      const response = await fetch(getBaseAuthURL('login'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -220,7 +216,7 @@ const LoginDialog = () => {
     const name = formData.get('name');
 
     try {
-      const response = await fetch(getAuthApiUrl('register'), {
+      const response = await fetch(getBaseAuthURL('register'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -248,7 +244,7 @@ const LoginDialog = () => {
 
   const verifyEmailCode = async () => {
     try {
-      const response = await fetch(getAuthApiUrl('verify-email'), {
+      const response = await fetch(getBaseAuthURL('verify-email'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -342,7 +338,7 @@ const LoginDialog = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(getAuthApiUrl('resend-verification'), {
+      const response = await fetch(getBaseAuthURL('resend-verification'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

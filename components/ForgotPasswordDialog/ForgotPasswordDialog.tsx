@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,7 +11,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Mail, ArrowLeft } from 'lucide-react';
+import { Mail, ArrowLeft, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 type ForgotPasswordDialogProps = {
@@ -29,11 +28,32 @@ export function ForgotPasswordDialog({
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const getPasswordResetURL = (endpoint: string) => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_RESET_URL;
+    return `${baseUrl}/${endpoint}`;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically call your password reset API
-    setIsSubmitted(true);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(getPasswordResetURL('forgot-password'), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Password reset request failed:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleClose = () => {
@@ -41,6 +61,7 @@ export function ForgotPasswordDialog({
     // Reset the state after the dialog is closed
     setTimeout(() => {
       setIsSubmitted(false);
+      setIsLoading(false);
       setEmail('');
     }, 300);
   };
@@ -74,6 +95,7 @@ export function ForgotPasswordDialog({
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   aria-required="true"
+                  disabled={isLoading}
                 />
               </div>
             </div>
@@ -83,6 +105,7 @@ export function ForgotPasswordDialog({
                 variant="outline"
                 onClick={onBack}
                 className="w-full sm:w-auto order-2 sm:order-1"
+                disabled={isLoading}
               >
                 <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
                 {t.login.backToLogin}
@@ -90,8 +113,19 @@ export function ForgotPasswordDialog({
               <Button
                 type="submit"
                 className="w-full sm:w-auto order-1 sm:order-2"
+                disabled={isLoading}
               >
-                {t.login.resetPassword}
+                {isLoading ? (
+                  <>
+                    <Loader2
+                      className="mr-2 h-4 w-4 animate-spin"
+                      aria-hidden="true"
+                    />
+                    {t.login.loading || 'Loading...'}
+                  </>
+                ) : (
+                  t.login.resetPassword
+                )}
               </Button>
             </DialogFooter>
           </form>
